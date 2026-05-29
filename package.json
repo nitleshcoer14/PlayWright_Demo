@@ -1,0 +1,27 @@
+{
+  "name": "playwright-saucedemo-framework",
+  "version": "1.0.0",
+  "description": "Playwright E2E Test Automation Framework for SauceDemo",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:safari": "playwright test --project=webkit",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "report": "playwright show-report reports/html-report",
+    "lint": "eslint tests/ pages/ utils/",
+    "lint:fix": "eslint tests/ pages/ utils/ --fix"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.12",
+    "eslint": "^9.3.0"
+  }
+}
